@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: dremkepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dremkepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dremkepipelinesjavascriptdocker 
+          image: acrct.azurecr.io/dremkepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
